@@ -1,0 +1,24 @@
+// Nav
+.nav-container {
+  @include clearfix;
+  @include row();
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $c-black;
+  border-bottom: 0.5em solid $c-gray-mid-3;
+  color: $c-white;
+  overflow: hidden;
+  padding: 0.5em 1em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  // width: 100%;
+}
+
+.nav-item {
+  background-color: $c-black;
+  flex-basis: auto;
+  padding: 0 0.5em;
+}

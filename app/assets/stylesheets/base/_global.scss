@@ -1,5 +1,3 @@
-// @import 'abstracts/variables';
-
 // Box Model
 body,
 body * {
@@ -26,12 +24,13 @@ a {
 }
 
 
-// Main boxes
+// Main
 .main {
-  display: flex;
-  flex-direction: column;
+  @include col();
+  align-items: center;
   min-height: 100%;
   position: relative;
+  top: 3em;
 }
 
 .main__body {

@@ -1,0 +1,43 @@
+// @import 'abstracts/variables';
+
+// Box Model
+body,
+body * {
+  box-sizing: border-box;
+  background-color: $c-gray-mid;
+  color: $c-white;
+}
+
+
+// Responsive images
+img,
+svg {
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+}
+
+
+// Links
+a {
+  // @include focus(default);
+  outline: 0;
+  text-decoration: none;
+}
+
+
+// Main boxes
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+.main__body {
+  flex: 1 0 auto;
+}
+
+.main__footer {
+  flex-shrink: 0;
+}

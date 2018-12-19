@@ -61,4 +61,9 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Sass options
+  config.sass.preferred_syntax = :scss
+  config.sass.line_comments = true
+  config.sass.cache = false
 end

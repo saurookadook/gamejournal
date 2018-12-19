@@ -1,0 +1,44 @@
+// Colors
+$c-white: #ffffff;
+$c-black: #000000;
+$c-gray: #777777;
+$c-gray-mid: #888888;
+$c-gray-mid-2: #8e8e8e;
+$c-gray-mid-3: #bbbbbb;
+$c-gray-light: #eaeaea;
+
+
+// Layout / Grid
+// See also:
+//        functions/grid-cols-to-px-width
+//        functions/grid-cols-to-pct-width
+//        mixins/grid-width
+$site-padding--mobile: 30px;
+$site-padding--md: 50px;
+$site-padding--lg: 80px;
+$site-padding--xl: 120px;
+$site-padding--xxl: 140px;
+$layout-col-count: 12;
+$layout-col-width: 82px;
+
+
+// Breakpoints
+$bp--xxs: 380px;
+$bp--xs: 450px;
+$bp--sm: 600px;
+$bp--md: 765px;
+$bp--lg: 960px;
+$bp--xl: 1200px;
+$bp--xxl: 1400px;
+$bp--xxxl: 1600px;
+
+
+// Spacing
+$space-xs: 5px;
+$space-sm: 10px;
+$space-md: 15px;
+$space-lg: 30px;
+$space-xl: 40px;
+$space-xxl: 50px;
+$space-xxxl: 75px;
+$space-xxxxl: 100px;

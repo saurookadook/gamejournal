@@ -10,17 +10,14 @@
   </head>
 
   <body>
+    <div class="main">
 
-    <!-- DEVISE FLASH MESSAGES -->
-    <% if notice %>
-      <p class="notice"><%= notice %></p>
-    <% end %>
+      <%= render 'layouts/devise-msgs' %>
 
-    <% if alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
-
-    <%= yield %>
+      <div class="main__body">
+        <%= yield %>
+      </div>
     
+    </div>
   </body>
 </html>

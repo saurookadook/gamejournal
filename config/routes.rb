@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :platforms
+  resources :games
   devise_for :users
 
   # Override Devise controllers here:

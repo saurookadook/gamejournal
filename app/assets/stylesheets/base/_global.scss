@@ -40,3 +40,12 @@ a {
 .main__footer {
   flex-shrink: 0;
 }
+
+// Devise Messages
+.devise__notice {
+  background: $c-gray-light;
+}
+
+.devise__alert {
+  background: red;
+}

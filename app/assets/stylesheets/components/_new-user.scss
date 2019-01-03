@@ -1,15 +1,17 @@
 // Devise LogIn/SignUp Forms
 .new_user {
+  background: $c-black;
   border-top: $ems--ml solid $c-white;
   border-left: $ems--ml solid $c-green;
   border-right: $ems--ml solid $c-orange;
   border-bottom: $ems--ml solid $c-blue;
   box-shadow: $ems--ml $ems--ml $ems--m $c-gray;
   margin-bottom: $ems--l;
+  padding: $ems--m;
   text-align: center;
+  min-width: 275px;
 }
 
 .new_user * {
-  background: $c-black;
-  padding: $ems--s;
+  background: $bg-none;
 }

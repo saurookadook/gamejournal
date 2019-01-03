@@ -6,13 +6,13 @@
   justify-content: flex-start;
 
   background-color: $c-black;
-  border-left: 0.5em solid #52d017;
-  border-right: 0.5em solid #f87431;
+  border-left: 0.5em solid $c-green;
+  border-right: 0.5em solid $c-orange;
   // border-bottom: 0.1em solid $c-gray-mid-3;
   color: $c-white;
   float: left;
   overflow: hidden;
-  padding-top: 1em;
+  padding-top: $ems--ml;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -23,10 +23,10 @@
 .nav-item {
   background-color: $c-black;
   flex-basis: auto;
-  padding: 1em;
+  padding: $ems--ml;
   width: 100%;
 
   &:hover {
-    background: #157DEC;
+    background: $c-blue;
   }
 }

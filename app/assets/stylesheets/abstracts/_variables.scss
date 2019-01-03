@@ -9,6 +9,9 @@ $c-gray-mid: #888888;
 $c-gray-mid-2: #8e8e8e;
 $c-gray-mid-3: #bbbbbb;
 $c-gray-light: #eaeaea;
+$c-orange: #f87431;
+$c-green: #52d017;
+$c-blue: #157DEC;
 
 
 // Layout / Grid
@@ -37,6 +40,11 @@ $bp--xxxl: 1600px;
 
 
 // Spacing
+$ems--s: 0.25em;
+$ems--m: 0.5em;
+$ems--ml: 1em;
+$ems--l: 1.5em;
+
 $space-xs: 5px;
 $space-sm: 10px;
 $space-md: 15px;

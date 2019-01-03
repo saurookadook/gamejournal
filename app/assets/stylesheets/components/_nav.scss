@@ -1,24 +1,32 @@
 // Nav
 .nav-container {
   @include clearfix;
-  @include row();
+  @include col();
   align-items: center;
   justify-content: flex-start;
 
   background-color: $c-black;
-  border-bottom: 0.1em solid $c-gray-mid-3;
+  border-left: 0.5em solid #52d017;
+  border-right: 0.5em solid #f87431;
+  // border-bottom: 0.1em solid $c-gray-mid-3;
   color: $c-white;
+  float: left;
   overflow: hidden;
-  padding: 0.5em 1em;
+  padding-top: 1em;
   position: fixed;
   top: 0;
-  right: 0;
+  bottom: 0;
   left: 0;
-  // width: 100%;
+  z-index: 10;
 }
 
 .nav-item {
   background-color: $c-black;
   flex-basis: auto;
-  padding: 0 0.5em;
+  padding: 1em;
+  width: 100%;
+
+  &:hover {
+    background: #157DEC;
+  }
 }

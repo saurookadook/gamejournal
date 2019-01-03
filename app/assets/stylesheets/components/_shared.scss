@@ -1,0 +1,14 @@
+// Devise Stuffz
+.devise__new-user {
+  text-align: center;
+}
+
+.devise__links {
+  * {
+    background: $c-black;
+    border: $ems--s solid $c-white;
+    box-shadow: $ems--m $ems--m $ems--m $c-gray;
+    margin-bottom: $ems--l;
+    padding: $ems--m;
+  }
+}

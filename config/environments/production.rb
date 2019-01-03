@@ -91,4 +91,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Sass options
+  config.sass.preferred_syntax = :scss
+  config.sass.line_comments = true
+  config.sass.cache = false
 end

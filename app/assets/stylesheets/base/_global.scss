@@ -1,0 +1,51 @@
+// Box Model
+body,
+body * {
+  box-sizing: border-box;
+  background-color: $c-gray-mid;
+  color: $c-white;
+}
+
+
+// Responsive images
+img,
+svg {
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+}
+
+
+// Links
+a {
+  // @include focus(default);
+  outline: 0;
+  text-decoration: none;
+}
+
+
+// Main
+.main {
+  @include col();
+  align-items: center;
+  min-height: 100%;
+  position: relative;
+  top: 3em;
+}
+
+.main__body {
+  flex: 1 0 auto;
+}
+
+.main__footer {
+  flex-shrink: 0;
+}
+
+// Devise Messages
+.devise__notice {
+  background: $c-gray-light;
+}
+
+.devise__alert {
+  background: red;
+}

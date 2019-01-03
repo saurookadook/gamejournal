@@ -1,0 +1,32 @@
+// Nav
+.nav-container {
+  @include clearfix;
+  @include col();
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $c-black;
+  border-left: 0.5em solid $c-green;
+  border-right: 0.5em solid $c-orange;
+  // border-bottom: 0.1em solid $c-gray-mid-3;
+  color: $c-white;
+  float: left;
+  overflow: hidden;
+  padding-top: $ems--ml;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav-item {
+  background-color: $c-black;
+  flex-basis: auto;
+  padding: $ems--ml;
+  width: 100%;
+
+  &:hover {
+    background: $c-blue;
+  }
+}

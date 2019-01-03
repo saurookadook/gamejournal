@@ -1,0 +1,19 @@
+@mixin absolute($value) {
+  @include shorthands(absolute, $value);
+}
+
+@mixin fixed($value) {
+  @include shorthands(fixed, $value);
+}
+
+@mixin relative($value) {
+  @include shorthands(relative, $value);
+}
+
+@mixin padding($value) {
+  @include shorthands(padding, $value);
+}
+
+@mixin margin($value) {
+  @include shorthands(margin, $value);
+}

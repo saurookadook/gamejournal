@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+      
+    <%= render 'layouts/nav'%>
+
+    <div class="main">
+
+      <%= render 'layouts/devise-msgs' %>
+
+      <div class="main__body">
+        <%= yield %>
+      </div>
+    
+    </div>
   </body>
 </html>

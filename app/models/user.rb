@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :user_games
   has_many :games, through: :user_games
 
-  has_many :user_platforms
-  has_many :platforms, through: :user_platforms
+  # has_many :user_platforms
+  # has_many :platforms, through: :user_platforms
 
 end

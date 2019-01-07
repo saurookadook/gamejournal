@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :owned_games
-  # has_many :games, through: :user_games
+  has_many :games, through: :owned_games
 
   has_many :user_platforms
   has_many :platforms, through: :user_platforms

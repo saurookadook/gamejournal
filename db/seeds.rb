@@ -71,6 +71,7 @@ game6.save if game6.valid?
 
 ### Collections ###
 user1.platforms.push(*[platform1, platform2, platform4, platform5, platform8, platform9, platform10])
+# user1.owned_games.build(game_id: 1, user_id: 1, notes: "Fun game to play while I'm poopin")
 
 # { title: "Hearthstone", notes: "Cubelock op...." },
 # { title: "Hearthstone", notes: "All of my decks are terrible. Halp!" }

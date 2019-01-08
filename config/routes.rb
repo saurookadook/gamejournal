@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   }
 
   resources :users do
-    resources :games
+    resources :owned_games, controller: :games
   end
   
   root 'welcome#home'

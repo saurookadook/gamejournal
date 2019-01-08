@@ -1,4 +1,4 @@
-class GamesController < ApplicationControllerf
+class GamesController < ApplicationController
   before_action :set_user!
 
   def index

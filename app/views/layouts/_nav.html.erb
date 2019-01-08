@@ -4,13 +4,13 @@
     <% if current_user %>
       <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-item" %>
 
-      <%= link_to "Your Entries", user_games_path(@user), class: "nav-item" %>
+      <%= link_to "Your Entries", user_owned_games_path(current_user), class: "nav-item" %>
     <% else %>
     <!-- TODO: breakpoints? -->
       <%= link_to "Sign Up", new_user_registration_path, class: "nav-item" %>
 
       <%= link_to "Log In", new_user_session_path, class: "nav-item" %>
 
-      <%= link_to "Entries", user_games_path(@user), class: "nav-item" %>
+      <%= link_to "Entries", games_path, class: "nav-item" %>
     <% end %>
 </div>

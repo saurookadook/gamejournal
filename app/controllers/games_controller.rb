@@ -8,4 +8,8 @@ class GamesController < ApplicationControllerf
       @games ||= @user.games
     end
   end
+
+  def show
+    @games ||= @user.owned_games
+  end
 end

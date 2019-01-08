@@ -1,0 +1,17 @@
+<% if current_user %>
+<% end %>
+
+<% if @games.length > 0 %>
+  <ul>
+    <% @games.each do |game| %>
+      <% game.display_attributes.each do |name, val| %>
+        <% if val %>
+          <li><%= name %>: <%= val %></li>
+        <% end %>
+      <% end %>
+      <br>
+    <% end %>
+  </ul>
+<% else%>
+  <p>Looks like you don't have any games! Add one to your Journal here.</p>
+<% end %>

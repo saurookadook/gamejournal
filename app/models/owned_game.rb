@@ -1,5 +1,5 @@
 class OwnedGame < ApplicationRecord
-  attr_reader :title, :summary, :publisher # TODO: refactor :owned_platforms?
+  attr_reader :title, :summary, :publisher, :display_attributes # TODO: refactor :owned_platforms?
 
   belongs_to :game
   belongs_to :user
@@ -18,6 +18,10 @@ class OwnedGame < ApplicationRecord
 
   def publisher
     self.game.publisher
+  end
+
+  def display_attributes
+    self.game.display_attributes
   end
 
   ## TODO: refactor?

@@ -4,11 +4,12 @@
 <% if @games.length > 0 %>
   <ul>
     <% @games.each do |game| %>
-      <% game.attributes.each do |name, val| %>
+      <% game.display_attributes.each do |name, val| %>
         <% if val %>
           <li><%= name %>: <%= val %></li>
         <% end %>
       <% end %>
+      <br>
     <% end %>
   </ul>
 <% else%>

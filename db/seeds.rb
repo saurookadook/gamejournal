@@ -37,12 +37,12 @@ genre7 = Genre.create( name: "Card game", description: '' )
 
 
 ### Games ###
-game1 = Game.create( title: "Hearthstone", summary: "Blizzard's virtual card game based on World of Warcraft" )
-game2 = Game.create( title: "Moonlighter", summary: "Aniaml Crossing meets old-school Legend of Zelda" )
-game3 = Game.create( title: "Skyrim", summary: "One of Bethesda's masterpieces" )
-game4 = Game.create( title: "Diablo III", summary: "Blizzard's latest dungeon-crawler" )
-game5 = Game.create( title: "The Legend of Zelda: Breath of the Wild", summary: "A goddamn masterpiece" )
-game6 = Game.create( title: "Fire Emblem: Awakening", summary: "Perma-death strategry game")
+game1 = Game.create( title: "Hearthstone", summary: "Blizzard's virtual card game based on World of Warcraft", publisher: 'Blizzard' )
+game2 = Game.create( title: "Moonlighter", summary: "Aniaml Crossing meets old-school Legend of Zelda", publisher: 'Digital Sun Games' )
+game3 = Game.create( title: "Skyrim", summary: "One of Bethesda's masterpieces", publisher: 'Bethesda' )
+game4 = Game.create( title: "Diablo III", summary: "Blizzard's latest dungeon-crawler", publisher: 'Blizzard' )
+game5 = Game.create( title: "The Legend of Zelda: Breath of the Wild", summary: "A goddamn masterpiece", publisher: 'Nintendo' )
+game6 = Game.create( title: "Fire Emblem: Awakening", summary: "Perma-death strategry game", publisher: 'Nintendo' )
 game7 = Game.create( title: "Ikamen Sengoku", summary: "Jackie's favorite game, probably not spelled correctly" )
 
 

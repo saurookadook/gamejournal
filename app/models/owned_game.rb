@@ -1,5 +1,5 @@
 class OwnedGame < ApplicationRecord
-  attr_reader :title, :summary, :publisher, :display_attributes # TODO: refactor :owned_platforms?
+  # attr_reader :title, :summary, :publisher, :display_attributes # TODO: refactor :owned_platforms?
 
   belongs_to :game
   belongs_to :user
@@ -8,21 +8,22 @@ class OwnedGame < ApplicationRecord
   has_many :platforms, through: :owned_game_platforms
 
   # Set custom readers to get info shared from associated Game
-  def title
-    self.game.title
-  end
+  # def title
+  #   # binding.pry
+  #   self.game.title
+  # end
 
-  def summary
-    self.game.summary
-  end
+  # def summary
+  #   self.game.summary
+  # end
 
-  def publisher
-    self.game.publisher
-  end
+  # def publisher
+  #   self.game.publisher
+  # end
 
-  def display_attributes
-    self.game.display_attributes
-  end
+  # def display_attributes
+  #   self.game.display_attributes
+  # end
 
   ## TODO: refactor?
   # def owned_platforms

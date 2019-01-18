@@ -19,5 +19,16 @@ class ApplicationController < ActionController::Base
       @user = User.find(params[:user_id])
     end
   end
+
+  ## TODO: safely handle different cases?
+  # def set_game!
+  #   if params[:controller] == 'games' 
+  #     if current_user || @user
+  #       @game ||= OwnedGame.find(params[:id])
+  #     else
+  #       @game ||= Game.find(params[:id])
+  #     end
+  #   end
+  # end
   
 end

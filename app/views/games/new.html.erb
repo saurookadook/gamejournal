@@ -1,0 +1,5 @@
+<% if @game && @owned_game %>
+  <%= render 'form', locals: { game: @game, owned_game: @owned_game } %>
+<% elsif @owned_game %>
+  <%= render 'form', locals: { owned_game: @owned_game } %>
+<% end %>

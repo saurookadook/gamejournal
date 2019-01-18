@@ -1,4 +1,9 @@
 <% if current_user %>
+  <h2>Your Games</h2>
+<% elsif @user %>
+  <h2><%= @user.username %>'s Games</h2>
+<% else %>
+  <h2>All Games</h2>
 <% end %>
 
 <% if @games.length > 0 %>

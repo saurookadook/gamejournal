@@ -1,0 +1,21 @@
+<% if current_user %>
+  <%= form_for @owned_game, url: new_user_owned_game_path do |f| %>
+    <%= f.fields_for @owned_game.game do |game_fields| %>
+      <%= game_fields.label :title %>
+      <%= game_fields.text_field :title %>
+
+      <%= game_fields.label :publisher %>
+      <%= game_fields.text_field :publisher %>
+
+      <%= game_fields.label :summary %>
+      <%= game_fields.text_area :summary %>
+    <% end %>
+
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
+    <%= f.submit %>
+  <% end %>
+<% end %>

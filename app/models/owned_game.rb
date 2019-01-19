@@ -7,23 +7,25 @@ class OwnedGame < ApplicationRecord
   has_many :owned_game_platforms
   has_many :platforms, through: :owned_game_platforms
 
+  accepts_nested_attributes_for :game
+
   # Set custom readers to get info shared from associated Game
-  # def title
-  #   # binding.pry
-  #   self.game.title
-  # end
+  def title
+    # binding.pry
+    self.game.title
+  end
 
-  # def summary
-  #   self.game.summary
-  # end
+  def summary
+    self.game.summary
+  end
 
-  # def publisher
-  #   self.game.publisher
-  # end
+  def publisher
+    self.game.publisher
+  end
 
-  # def display_attributes
-  #   self.game.display_attributes
-  # end
+  def display_attributes
+    self.game.display_attributes
+  end
 
   ## TODO: refactor?
   # def owned_platforms

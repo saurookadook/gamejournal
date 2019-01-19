@@ -6,7 +6,7 @@ class GamesController < ApplicationController
     if @user
       @games ||= @user.owned_games
     else
-      @games ||= Games.all
+      @games ||= Game.all
     end
   end
 
@@ -17,11 +17,25 @@ class GamesController < ApplicationController
   def new
     if current_user
       @owned_game = current_user.owned_games.build
-      @owned_game.build_game
     end
   end
 
   def create
+    if current_user
+      @owned_game = current_user.owned_games.build(owned_game_params)
+
+      # TODO: refactor into helper method?
+      if @owned_game.game.valid?
+        @owned_game.game.save
+      end
+
+      if @owned_game.valid?
+        @owned_game.save
+      end
+
+      redirect_to user_owned_games_path(current_user)
+    end
+    
   end
 
   def edit
@@ -35,7 +49,9 @@ class GamesController < ApplicationController
 
   private
 
-  def game_params
-    params.require(:game)
+  def owned_game_params
+    params.require(:owned_game).permit(:notes, :user_id, 
+      game_attributes: [:title, :publisher, :summary]
+    )
   end
 end

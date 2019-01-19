@@ -1,0 +1,13 @@
+// New Game Form
+.new_owned_game {
+  * {
+    margin: $ems--s 0;
+    padding: $ems--s;
+  }
+}
+
+.new_owned_game--fields {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}

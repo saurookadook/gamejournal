@@ -1,18 +1,26 @@
 <% if current_user %>
-  <%= form_for @owned_game, url: new_user_owned_game_path do |f| %>
-    <%= f.fields_for @owned_game.game do |game_fields| %>
-      <%= game_fields.label :title %>
-      <%= game_fields.text_field :title %>
+  <%= form_for @owned_game, url: user_owned_games_path do |f| %>
+    <%= f.fields_for :game, @owned_game.build_game do |game_fields| %>
+      <div class="new_owned_game--fields">
+        <%= game_fields.label :title %>
+        <%= game_fields.text_field :title %><br>
+      </div>
 
-      <%= game_fields.label :publisher %>
-      <%= game_fields.text_field :publisher %>
+      <div class="new_owned_game--fields">
+        <%= game_fields.label :publisher %>
+        <%= game_fields.text_field :publisher %><br>
+      </div>
 
-      <%= game_fields.label :summary %>
-      <%= game_fields.text_area :summary %>
+      <div class="new_owned_game--fields">
+        <%= game_fields.label :summary %>
+        <%= game_fields.text_area :summary %><br>
+      </div>
     <% end %>
 
-    <%= f.label :notes %>
-    <%= f.text_area :notes %>
+    <div class="new_owned_game--fields">
+      <%= f.label :notes %>
+      <%= f.text_area :notes %><br>
+    </div>
 
     <%= f.hidden_field :user_id, value: current_user.id %>
 

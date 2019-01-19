@@ -21,14 +21,14 @@ class ApplicationController < ActionController::Base
   end
 
   ## TODO: safely handle different cases?
-  # def set_game!
-  #   if params[:controller] == 'games' 
-  #     if current_user || @user
-  #       @game ||= OwnedGame.find(params[:id])
-  #     else
-  #       @game ||= Game.find(params[:id])
-  #     end
-  #   end
-  # end
+  def set_game!
+    if params[:controller] == 'games' 
+      if current_user || @user
+        @game ||= OwnedGame.find(params[:id])
+      else
+        @game ||= Game.find(params[:id])
+      end
+    end
+  end
   
 end

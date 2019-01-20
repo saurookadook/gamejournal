@@ -48,9 +48,13 @@ ul {
 
 // Devise Messages
 .devise__notice {
-  background: $c-gray-light;
+  background: $bg-none;
+  display: block;
 }
 
 .devise__alert {
   background: red;
+  display: block;
+  text-align: center;
+  width: 100%;
 }

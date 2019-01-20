@@ -1,0 +1,12 @@
+<div class="game-view__show">
+  <% if current_user && @owned_game %>
+    <h1>Title: <%= @owned_game.title %></h1>
+    <h3>Publisher: <%= @owned_game.publisher %></h3>
+    <p>Summary: <%= @owned_game.summary %></p>
+    <p>Notes: <%= @owned_game.notes %></p>
+  <% elsif @game %>
+    <h1>Title: <%= @game.title %></h1>
+    <h3>Publisher: <%= @game.publisher %></h3>
+    <p>Summary: <%= @game.summary %></p>
+  <% end %>
+</div>

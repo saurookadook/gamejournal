@@ -4,11 +4,15 @@
 }
 
 .devise__links {
+  @include col();
+  align-items: center;
+
   * {
     background: $c-black;
     border: $ems--s solid $c-white;
     box-shadow: $ems--m $ems--m $ems--m $c-gray;
     margin-bottom: $ems--l;
     padding: $ems--m;
+    max-width: 50%;
   }
 }

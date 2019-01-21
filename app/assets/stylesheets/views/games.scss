@@ -1,3 +1,12 @@
-// Place all the styles related to the Games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Game Index
+.game-entry {
+  margin-bottom: $ems--l;
+
+  * {
+    margin: $ems--s;
+  }
+}
+
+.game-entry__edit-link {
+  padding: $ems--s 0 $ems--l;
+}

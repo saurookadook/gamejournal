@@ -8,5 +8,18 @@
 }
 
 .game-entry__edit-link {
-  padding: $ems--s 0 $ems--l;
+  padding: $ems--s 0 $ems--s;
+
+  a {
+    span:hover {
+      // TODO: fix transformation
+      // display: inline-block;
+      text-shadow: $ems--s $ems--s $ems--s $c-gray-dark;
+      // transform: scale(1.2);
+      // -webkit-transform: scale(1.2);
+      // -moz-transform: scale(1.2);
+      // -ms-transform: scale(1.2);
+      // -o-transform: scale(1.2);
+    }
+  }
 }

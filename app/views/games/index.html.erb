@@ -20,12 +20,15 @@
 
         <% if current_user %>
           <p class="game-entry__edit-link">
-            <%= link_to "Edit this entry", edit_user_owned_game_path(current_user, game) %>
+            <%= link_to edit_user_owned_game_path(current_user, game) do %>
+              <span>Edit this entry</span>
+            <% end %>
           </p>
         <% end %>
+
       </div>
     <% end %>
   </div>
-<% else%>
-  <p>Looks like you don't have any games! Add one to your Journal here.</p>
+<% elsif current_user %>
+  <p>Looks like you don't have any games! Add one to your Journal <%= link_to "here", new_user_owned_game_path(current_user) %>.</p>
 <% end %>

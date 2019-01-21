@@ -12,6 +12,9 @@
       <% game.display_attributes.each do |name, val| %>
         <% if val %>
           <li><%= name %>: <%= val %></li>
+          <%= if current_user %>
+            <li><%= link_to "Edit this entry", edit_user_owned_game_path(current_user, game.id), class: "edit_owned_game" %></li>
+          <% end %>
         <% end %>
       <% end %>
       <br>

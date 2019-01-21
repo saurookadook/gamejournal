@@ -3,7 +3,9 @@ class GamesController < ApplicationController
   before_action :set_game!, only: [:show, :edit, :update]
 
   def index
-    if @user
+    if @user == current_user
+      @games ||= current_user.owned_games
+    elsif @user
       @games ||= @user.owned_games
     else
       @games ||= Game.all

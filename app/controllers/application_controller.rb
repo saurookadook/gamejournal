@@ -20,10 +20,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  ## TODO: safely handle different cases?
+  ## TODO: safely handle different cases? different roles?
   def set_game!
     if params[:controller] == 'games' 
-      if current_user || @user
+      if current_user
         @game ||= OwnedGame.find(params[:id])
       else
         @game ||= Game.find(params[:id])

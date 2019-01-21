@@ -1,5 +1,5 @@
 // Game Index
-.game-entry {
+.game_entry {
   margin-bottom: $ems--l;
 
   * {
@@ -7,7 +7,7 @@
   }
 }
 
-.game-entry__edit-link {
+.game_entry--edit_link {
   padding: $ems--s 0 $ems--s;
 
   a {

@@ -1,6 +1,6 @@
 <% if current_user %>
-  <%= form_for @owned_game, url: user_owned_games_path do |f| %>
-    <%= f.fields_for :game, @owned_game.build_game do |game_fields| %>
+  <%= form_for [current_user, @owned_game] do |f| %>
+    <%= f.fields_for :game, @owned_game.game do |game_fields| %>
       <div class="new_owned_game--fields">
         <%= game_fields.label :title %>
         <%= game_fields.text_field :title %><br>

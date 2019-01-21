@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
   def set_game!
     if params[:controller] == 'games' 
       if current_user || @user
-        @game ||= OwnedGame.find(params[:id])
+        @owned_game ||= OwnedGame.find(params[:id])
       else
         @game ||= Game.find(params[:id])
       end

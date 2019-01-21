@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_user!
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
   before_action :set_game!, only: [:show, :edit, :update]
 
   def index
@@ -19,6 +20,7 @@ class GamesController < ApplicationController
   def new
     if current_user
       @owned_game = current_user.owned_games.build
+      @game = @owned_game.build_game
     end
   end
 
@@ -44,6 +46,19 @@ class GamesController < ApplicationController
   end
 
   def update
+    if current_user
+      @owned_game.update(owned_game_params)
+
+      if @owned_game.game.valid?
+        @owned_game.game.save
+      end
+
+      if @owned_game.valid?
+        @owned_game.save
+      end
+
+      redirect_to user_owned_games_path(current_user)
+    end
   end
 
   def destroy
@@ -53,7 +68,7 @@ class GamesController < ApplicationController
 
   def owned_game_params
     params.require(:owned_game).permit(:notes, :user_id, 
-      game_attributes: [:title, :publisher, :summary]
+      game_attributes: [:id, :title, :publisher, :summary]
     )
   end
 end

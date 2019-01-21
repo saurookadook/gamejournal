@@ -7,10 +7,10 @@
 <% end %>
 
 <% if @games.length > 0 %>
-  <div class="games-container">
+  <div class="games_container">
 
     <% @games.each do |game| %>
-      <div class="game-entry">
+      <div class="game_entry">
 
         <% game.display_attributes.each do |key, val| %>
           <% if !val.blank? %>
@@ -19,7 +19,7 @@
         <% end %>
 
         <% if current_user %>
-          <p class="game-entry__edit-link">
+          <p class="game_entry--edit_link">
             <%= link_to edit_user_owned_game_path(current_user, game) do %>
               <span>Edit this entry</span>
             <% end %>

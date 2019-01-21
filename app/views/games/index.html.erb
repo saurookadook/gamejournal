@@ -8,13 +8,16 @@
 
 <% if @games.length > 0 %>
   <div class="games-container">
+
     <% @games.each do |game| %>
       <div class="game-entry">
-        <% game.display_attributes.each do |name, val| %>
-          <% if val %>
-            <p><%= name %>: <%= val %></p>
+
+        <% game.display_attributes.each do |key, val| %>
+          <% if !val.blank? %>
+            <p><%= key %>: <%= val %></p>
           <% end %>
         <% end %>
+
         <% if current_user %>
           <p class="game-entry__edit-link">
             <%= link_to "Edit this entry", edit_user_owned_game_path(current_user, game) %>

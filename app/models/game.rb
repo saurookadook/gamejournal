@@ -10,10 +10,14 @@ class Game < ApplicationRecord
   # Custom methods
   def display_attributes
     { 
-      Title: self.title, 
-      Summary: self.summary, 
-      Publisher: self.publisher 
+      Title: self.title,
+      Platforms: self.display_platforms,
+      Publisher: self.publisher,
+      Summary: self.summary
     }
   end
 
+  def display_platforms
+    self.platforms.map {|platform| platform.name}.join(', ')
+  end
 end

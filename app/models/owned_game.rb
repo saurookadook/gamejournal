@@ -24,7 +24,17 @@ class OwnedGame < ApplicationRecord
   end
 
   def display_attributes
-    self.game.display_attributes
+    @attrs = self.game.display_attributes
+
+    if self.platforms
+      @attrs[:Platforms] = self.platforms.map {|platform| platform.name}.join(', ')
+    end
+
+    if self.notes
+      @attrs[:Notes] = self.notes
+    end
+
+    @attrs
   end
 
   ## TODO: refactor?

@@ -14,14 +14,26 @@
 
         <% game.display_attributes.each do |key, val| %>
           <% if !val.blank? %>
-            <p><%= key %>: <%= val %></p>
+            <p><strong><%= key %>:</strong> <%= val %></p>
           <% end %>
         <% end %>
 
         <% if current_user %>
-          <p class="game_entry--edit_link">
+          <p class="game_entry--links">
+            <%= link_to user_owned_game_path(current_user, game) do %>
+              <span>View</span>
+            <% end %>
+
+            ||
+
             <%= link_to edit_user_owned_game_path(current_user, game) do %>
-              <span>Edit this entry</span>
+              <span>Edit</span>
+            <% end %>
+            
+            ||
+
+            <%= link_to user_owned_game_path(current_user, game) do %>
+              <span>Delete</span>
             <% end %>
           </p>
         <% end %>

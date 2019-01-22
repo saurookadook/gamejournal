@@ -8,7 +8,7 @@
   border-right: 0.5em solid $c-orange;
   // border-bottom: 0.1em solid $c-gray-mid-3;
   color: $c-white;
-  
+
   overflow: hidden;
   padding-top: $ems--ml;
   position: fixed;
@@ -17,8 +17,9 @@
   bottom: 0;
   left: 0;
 
-  max-width: $space-3xxl;
-  min-width: $space-xxl;
+  width: 10%;
+  // max-width: $space-3xxl;
+  // min-width: $space-xxl;
 
   z-index: 10;
 }

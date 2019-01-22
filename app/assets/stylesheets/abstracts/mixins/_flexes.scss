@@ -7,3 +7,13 @@
   display: flex;
   flex-direction: row;
 }
+
+@mixin inline-col() {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+@mixin inline-row() {
+  display: inline-flex;
+  flex-direction: row;
+}

@@ -32,15 +32,24 @@ ul {
 // Site
 .site {
   @include col();
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   // align-items: center;
   justify-content: center;
 }
 
 .main {
-  margin-left: $space-3xxl;
-  min-height: 100%;
+  // @include clearfix();
+  @include col();
+  
+  
+  height: 100%;
   top: $ems--xxl;
+  width: 70%;
+
+  // * {
+  //   justify-content: center;
+  //   text-align: center;
+  // }
 }
 
 .main__footer {

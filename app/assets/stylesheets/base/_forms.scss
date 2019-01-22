@@ -1,3 +1,26 @@
+// Devise Stuffz
+.devise__new-user {
+  max-width: 300px;
+}
+
+.devise__links {
+  @include col();
+  align-items: center;
+
+  * {
+    background: $c-black;
+    border: $ems--s solid $c-white;
+    box-shadow: $ems--m $ems--m $ems--m $c-gray;
+    margin-bottom: $ems--l;
+    padding: $ems--m;
+    // max-width: $ems--xxl;
+  }
+}
+
+// .new_user {
+
+// }
+
 // Game Forms
 .new_owned_game, .edit_owned_game {
   * {

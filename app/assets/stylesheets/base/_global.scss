@@ -29,17 +29,18 @@ ul {
   list-style-type: none;
 }
 
-// Main
-.main {
+// Site
+.site {
   @include col();
-  align-items: center;
-  min-height: 100%;
-  position: relative;
-  top: 3em;
+  flex-wrap: nowrap;
+  // align-items: center;
+  justify-content: center;
 }
 
-.main__body {
-  flex: 1 0 auto;
+.main {
+  margin-left: $space-3xxl;
+  min-height: 100%;
+  top: $ems--xxl;
 }
 
 .main__footer {

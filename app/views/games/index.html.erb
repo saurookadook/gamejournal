@@ -7,10 +7,12 @@
 <% end %>
 
 <% if @games.length > 0 %>
-  <div class="games_container">
+  <%# <div class="games_container"> %>
 
     <% @games.each do |game| %>
       <div class="game_entry">
+        <h3>Title: <%= game.title %></h3>
+        <h4>Publisher: <%= game.publisher %></h4>
 
         <% game.display_attributes.each do |key, val| %>
           <% if !val.blank? %>
@@ -37,10 +39,12 @@
             <% end %>
           </p>
         <% end %>
+      
+      <div class="separator"></div>
 
       </div>
     <% end %>
-  </div>
+  <%# </div> %>
 <% elsif current_user %>
   <p>Looks like you don't have any games! Add one to your Journal <%= link_to "here", new_user_owned_game_path(current_user) %>.</p>
 <% end %>

@@ -16,3 +16,11 @@
     max-width: 50%;
   }
 }
+
+
+// Layout
+.separator {
+  display: block;
+  background: $c-gray-dark;
+  max-height: 3px; 
+}

@@ -11,16 +11,19 @@
 
   <body>
       
-    <%= render 'layouts/nav'%>
+    <div class="site">
 
-    <div class="main">
+      <%= render 'layouts/nav'%>
 
-      <%= render 'layouts/devise-msgs' %>
+      <div class="main">
 
-      <div class="main__body">
+        <%= render 'layouts/devise-msgs' %>
+
         <%= yield %>
+      
       </div>
-    
+
     </div>
+    
   </body>
 </html>

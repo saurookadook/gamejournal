@@ -16,6 +16,13 @@
   }
 }
 
+.devise__links-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  text-shadow: $ems--s $ems--s $ems--s $c-gray-dark;
+}
 
 // User Forms
 // .new_user {

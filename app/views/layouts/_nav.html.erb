@@ -1,4 +1,4 @@
-<div class="nav-container">
+<nav class="nav-container" role="navigation">
   <%= link_to "Home", root_path, class: "nav-item" %>
 
   <% if current_user %>
@@ -13,4 +13,4 @@
 
     <%= link_to "Entries", games_path, class: "nav-item" %>
   <% end %>
-</div>
+</nav>

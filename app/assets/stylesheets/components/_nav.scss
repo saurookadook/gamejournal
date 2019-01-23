@@ -1,17 +1,5 @@
 // Nav
 .nav-container {
-  // -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
-  // -moz-box-flex: 1;         /* OLD - Firefox 19- */
-  // width: 7.5%;               /* For old syntax, otherwise collapses. */
-  // -webkit-flex: 1;          /* Chrome */
-  // -ms-flex: 1;              /* IE 10 */
-  // flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
-  // -webkit-box-ordinal-group: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
-  // -moz-box-ordinal-group: 1;      /* OLD - Firefox 19- */
-  // -ms-flex-order: 1;              /* TWEENER - IE 10 */
-  // -webkit-order: 1;               /* NEW - Chrome */
-  // order: 1;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
   @include col();
 
   background-color: $c-black;
@@ -19,19 +7,13 @@
   border-right: 0.5em solid $c-orange;
   // border-bottom: 0.1em solid $c-gray-mid-3;
   color: $c-white;
-
-  
+  font-size: 1.05em;
   overflow: hidden;
   padding-top: $ems--ml;
   position: fixed;
-
   top: 0;
   bottom: 0;
   left: 0;
-
-  // max-width: $space-3xxl;
-  // min-width: $space-xxl;
-
   z-index: 10;
 }
 

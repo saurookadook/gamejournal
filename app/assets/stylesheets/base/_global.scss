@@ -45,8 +45,8 @@ ul {
   @include col();
   align-items: center;
   
-  height: 100%;
-  top: $ems--xxl;
+  height: 70%;
+  // top: $ems--2xl;
   width: (100% - 7.5%);
 }
 

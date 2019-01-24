@@ -1,6 +1,6 @@
 // Layout
 .separator {
-  @include clearfix();
+  @include clearfix;
   // display: block;
   // background: $c-gray-dark;
   // max-height: 3px; 

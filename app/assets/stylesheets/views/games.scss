@@ -1,4 +1,4 @@
-// Game Index
+// Index
 .index-games_container {
   @include col();
   align-items: flex-start;
@@ -38,4 +38,12 @@
       // -o-transform: scale(1.2);
     }
   }
+}
+
+
+// Show
+.show-game-entry_container {
+  @include col();
+  align-items: center;
+  width: 90%;
 }

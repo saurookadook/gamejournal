@@ -1,50 +1,59 @@
 <% if current_user %>
-  <h2>Your Games</h2>
+  <h1 class="header-text">Your Games</h1>
 <% elsif @user %>
-  <h2><%= @user.username %>'s Games</h2>
+  <h1 class="header-text"><%= @user.username %>'s Games</h1>
 <% else %>
-  <h2>All Games</h2>
+  <h1 class="header-text">All Games</h1>
 <% end %>
 
 <% if @games.length > 0 %>
-  <%# <div class="games_container"> %>
+  <div class="games_container">
 
     <% @games.each do |game| %>
-      <div class="game_entry">
-        <h3>Title: <%= game.title %></h3>
-        <h4>Publisher: <%= game.publisher %></h4>
+      <div class="game_entry-container">
+        <!-- TODO: general game path or owned game path (when applicable) -->
+        <%= link_to games_path(game), class: "image_placeholder" do %>
+          <%# <p class="image_placeholder">BIG OL' IMAGE PLACEHOLDER</p> %>
+          BIG OL' IMAGE PLACEHOLDER
+        <% end %>
 
-        <% game.display_attributes.each do |key, val| %>
-          <% if !val.blank? %>
-            <p><strong><%= key %>:</strong> <%= val %></p>
+        <div class="game_entry">
+          <h3>Title: <%= game.title %></h3>
+          <h4>Publisher: <%= game.publisher %></h4>
+
+          <% game.display_attributes.each do |key, val| %>
+            <% if !val.blank? %>
+              <p><strong><%= key %>:</strong> <%= val %></p>
+            <% end %>
           <% end %>
-        <% end %>
 
-        <% if current_user %>
-          <p class="game_entry--links">
-            <%= link_to user_owned_game_path(current_user, game) do %>
-              <span>View</span>
-            <% end %>
+          <% if current_user %>
+            <p class="game_entry--links">
+              <%= link_to user_owned_game_path(current_user, game) do %>
+                <span>View</span>
+              <% end %>
 
-            ||
+              ||
 
-            <%= link_to edit_user_owned_game_path(current_user, game) do %>
-              <span>Edit</span>
-            <% end %>
-            
-            ||
+              <%= link_to edit_user_owned_game_path(current_user, game) do %>
+                <span>Edit</span>
+              <% end %>
+              
+              ||
 
-            <%= link_to user_owned_game_path(current_user, game) do %>
-              <span>Delete</span>
-            <% end %>
-          </p>
-        <% end %>
+              <%= link_to user_owned_game_path(current_user, game) do %>
+                <span>Delete</span>
+              <% end %>
+            </p>
+          <% end %>
       
-      <div class="separator"></div>
+      <%# <div class="separator"></div> %>
+        </div>
 
       </div>
     <% end %>
-  <%# </div> %>
+
+  </div>
 <% elsif current_user %>
   <p>Looks like you don't have any games! Add one to your Journal <%= link_to "here", new_user_owned_game_path(current_user) %>.</p>
 <% end %>

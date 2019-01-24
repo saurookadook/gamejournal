@@ -1,6 +1,6 @@
 // Layout
 .separator {
-  clear: both;
+  @include clearfix();
   // display: block;
   // background: $c-gray-dark;
   // max-height: 3px; 
@@ -10,7 +10,7 @@
 // Images
 .image_placeholder {
   border: $ems--s solid $c-black;
-  height: 150px;
-  max-width: 100px;
+  height: 175px;
+  max-width: 130px;
   overflow-wrap: break-word;
 }

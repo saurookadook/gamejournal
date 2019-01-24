@@ -18,7 +18,7 @@
         <% end %>
 
         <div class="game_entry">
-          <h3>Title: <%= game.title %></h3>
+          <h3>Title: <%= link_to "#{game.title}", user_owned_game_path(current_user, game) %></h3>
           <h4>Publisher: <%= game.publisher %></h4>
 
           <% game.display_attributes.each do |key, val| %>
@@ -47,8 +47,8 @@
             </p>
           <% end %>
       
-      <%# <div class="separator"></div> %>
         </div>
+      <div class="separator"></div>
 
       </div>
     <% end %>

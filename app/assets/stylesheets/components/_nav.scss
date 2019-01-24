@@ -9,18 +9,19 @@
   color: $c-white;
   font-size: 1.05em;
   overflow: hidden;
-  padding-top: $ems--ml;
+  padding-top: $ems--xxl;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 10;
+  width: 9%;
 }
 
 .nav-item {
   background-color: $c-black;
   flex-basis: auto;
-  padding: $ems--ml;
+  padding: $ems--l $ems--ml;
   width: 100%;
 
   &:hover {

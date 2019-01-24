@@ -1,33 +1,40 @@
-<div class="game-view__show">
-  <% if current_user && @owned_game %>
-    <h1><strong>Title:</strong> <%= @owned_game.title %></h1>
-    <h3><strong>Publisher:</strong> <%= @owned_game.publisher %></h3>
+<section class="show-game-entry_container">
 
-    <% @owned_game.display_attributes.each do |key, val| %>
-      <p><strong><%= key %>:</strong> <%= val %></p>
+  <!-- TODO: use svg for arrow? -->
+  <%= link_to "<- Back to All Entries", user_owned_games_path(current_user) %>
+
+  <div class="game-view__show">
+    <% if current_user && @owned_game %>
+      <h1><strong>Title:</strong> <%= @owned_game.title %></h1>
+      <h3><strong>Publisher:</strong> <%= @owned_game.publisher %></h3>
+
+      <% @owned_game.display_attributes.each do |key, val| %>
+        <p><strong><%= key %>:</strong> <%= val %></p>
+      <% end %>
+
+      <p class="game_entry--links">
+        <!-- View || Edit || Delete-->
+        <%= link_to user_owned_game_path(current_user, @owned_game) do %>
+          <span>View</span>
+        <% end %>
+
+        ||
+
+        <%= link_to edit_user_owned_game_path(current_user, @owned_game) do %>
+          <span>Edit</span>
+        <% end %>
+        
+        ||
+
+        <%= link_to user_owned_game_path(current_user, @owned_game) do %>
+          <span>Delete</span>
+        <% end %>
+      </p>
+    <% elsif @game %>
+      <h1>Title: <%= @game.title %></h1>
+      <h3>Publisher: <%= @game.publisher %></h3>
+      <p>Summary: <%= @game.summary %></p>
     <% end %>
+  </div>
 
-    <p class="game_entry--links">
-      <!-- View || Edit || Delete-->
-      <%= link_to user_owned_game_path(current_user, @owned_game) do %>
-        <span>View</span>
-      <% end %>
-
-      ||
-
-      <%= link_to edit_user_owned_game_path(current_user, @owned_game) do %>
-        <span>Edit</span>
-      <% end %>
-      
-      ||
-
-      <%= link_to user_owned_game_path(current_user, @owned_game) do %>
-        <span>Delete</span>
-      <% end %>
-    </p>
-  <% elsif @game %>
-    <h1>Title: <%= @game.title %></h1>
-    <h3>Publisher: <%= @game.publisher %></h3>
-    <p>Summary: <%= @game.summary %></p>
-  <% end %>
-</div>
+</section>

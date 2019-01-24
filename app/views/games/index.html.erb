@@ -7,17 +7,17 @@
 <% end %>
 
 <% if @games.length > 0 %>
-  <div class="games_container">
+  <div class="index-games_container">
 
     <% @games.each do |game| %>
-      <div class="game_entry-container">
+      <div class="index-game_entry-container">
         <!-- TODO: general game path or owned game path (when applicable) -->
         <%= link_to games_path(game), class: "image_placeholder" do %>
           <%# <p class="image_placeholder">BIG OL' IMAGE PLACEHOLDER</p> %>
           BIG OL' IMAGE PLACEHOLDER
         <% end %>
 
-        <div class="game_entry">
+        <div class="index-game_entry">
           <h3>Title: <%= link_to "#{game.title}", user_owned_game_path(current_user, game) %></h3>
           <h4>Publisher: <%= game.publisher %></h4>
 
@@ -28,7 +28,7 @@
           <% end %>
 
           <% if current_user %>
-            <p class="game_entry--links">
+            <p class="index-game_entry--links">
               <%= link_to user_owned_game_path(current_user, game) do %>
                 <span>View</span>
               <% end %>

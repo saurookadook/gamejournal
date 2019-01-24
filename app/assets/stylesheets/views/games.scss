@@ -1,5 +1,5 @@
 // Game Index
-.games_container {
+.index-games_container {
   @include col();
   align-items: flex-start;
   // align-items: stretch;
@@ -7,7 +7,7 @@
   width: 90%;
 }
 
-.game_entry-container {
+.index-game_entry-container {
   @include row();
   align-items: center;
   // justify-content: stretch;
@@ -15,7 +15,7 @@
   min-height: 180px;
 }
 
-.game_entry {
+.index-game_entry {
 
   h3, h4, p {
     margin: $ems--s;
@@ -23,7 +23,7 @@
   }
 }
 
-.game_entry--links {
+.index-game_entry--links {
   padding: $ems--s 0 $ems--s;
 
   a {

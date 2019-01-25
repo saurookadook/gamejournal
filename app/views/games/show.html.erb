@@ -5,31 +5,44 @@
 
   <div class="game-view__show">
     <% if current_user && @owned_game %>
-      <h1><strong>Title:</strong> <%= @owned_game.title %></h1>
-      <h3><strong>Publisher:</strong> <%= @owned_game.publisher %></h3>
+      <div class="game-view__show-main">
+        <h1><strong>Title:</strong> <%= @owned_game.title %></h1>
+        <h3><strong>Publisher:</strong> <%= @owned_game.publisher %></h3>
 
-      <% @owned_game.display_attributes.each do |key, val| %>
-        <p><strong><%= key %>:</strong> <%= val %></p>
-      <% end %>
-
-      <p class="game_entry--links">
-        <!-- View || Edit || Delete-->
-        <%= link_to user_owned_game_path(current_user, @owned_game) do %>
-          <span>View</span>
+        <!-- TODO: general game path or owned game path (when applicable) -->
+        <%= link_to games_path(@owned_game.game), class: "image_placeholder" do %>
+          <%# <p class="image_placeholder">BIG OL' IMAGE PLACEHOLDER</p> %>
+          BIG OL' IMAGE PLACEHOLDER
         <% end %>
+      </div>
 
-        ||
+      <div class="game-view__show-links">
+        <p class="game_entry--links">
+          <!-- View || Edit || Delete-->
+          <%= link_to user_owned_game_path(current_user, @owned_game) do %>
+            <span>View</span>
+          <% end %>
 
-        <%= link_to edit_user_owned_game_path(current_user, @owned_game) do %>
-          <span>Edit</span>
+          ||
+
+          <%= link_to edit_user_owned_game_path(current_user, @owned_game) do %>
+            <span>Edit</span>
+          <% end %>
+          
+          ||
+
+          <%= link_to user_owned_game_path(current_user, @owned_game) do %>
+            <span>Delete</span>
+          <% end %>
+        </p>
+      </div>
+
+      <div class="game-view__show-attrs">
+        <% @owned_game.display_attributes.each do |key, val| %>
+          <p><strong><%= key %>:</strong> <%= val %></p>
         <% end %>
-        
-        ||
+      </div>
 
-        <%= link_to user_owned_game_path(current_user, @owned_game) do %>
-          <span>Delete</span>
-        <% end %>
-      </p>
     <% elsif @game %>
       <h1>Title: <%= @game.title %></h1>
       <h3>Publisher: <%= @game.publisher %></h3>

@@ -47,3 +47,30 @@
   align-items: center;
   width: 90%;
 }
+
+.game-view__show {
+  margin: $rems--l;
+  width: inherit;
+}
+
+.game-view__show-head {
+  @include row();
+  align-items: center;
+  justify-content: space-evenly;
+
+  > * {
+    margin: 0 $rems--l;
+  }
+}
+
+.game-view__show-main {
+  @include col();
+}
+
+.game-view__show-links {
+  text-align: center;
+}
+
+// .game-view__show-attrs {
+  
+// }

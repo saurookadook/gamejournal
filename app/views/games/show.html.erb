@@ -5,9 +5,11 @@
 
   <div class="game-view__show">
     <% if current_user && @owned_game %>
-      <div class="game-view__show-main">
-        <h1><strong>Title:</strong> <%= @owned_game.title %></h1>
-        <h3><strong>Publisher:</strong> <%= @owned_game.publisher %></h3>
+      <div class="game-view__show-head">
+        <div class="game-view__show-main">
+          <h1><strong>Title:</strong> <%= @owned_game.title %></h1>
+          <h3><strong>Publisher:</strong> <%= @owned_game.publisher %></h3>
+        </div>
 
         <!-- TODO: general game path or owned game path (when applicable) -->
         <%= link_to games_path(@owned_game.game), class: "image_placeholder" do %>
